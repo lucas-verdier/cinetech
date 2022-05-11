@@ -1,0 +1,64 @@
+html, body {
+    margin: 0;
+    min-height: 100vh;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    background: rgb(56,25,69);
+    background: -moz-linear-gradient(90deg, rgba(56,25,69,1) 0%, rgba(57,49,108,1) 51%, rgba(33,35,96,1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(56,25,69,1) 0%, rgba(57,49,108,1) 51%, rgba(33,35,96,1) 100%);
+    background: linear-gradient(90deg, rgba(56,25,69,1) 0%, rgba(57,49,108,1) 51%, rgba(33,35,96,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#381945",endColorstr="#212360",GradientType=1);
+}
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2 {
+    font-size: 2em;
+    color: white;
+    font-weight: 600;
+}
+
+/* TRENDING */
+main section {
+    width: 90%;
+    height: auto;
+}
+main section article {
+    display: flex;
+    justify-content: space-between;
+    overflow-x: scroll;
+}
+main section article a {
+    margin-right: 10px;
+    text-decoration: none;
+    text-align: center;
+}
+
+main section article p:first-of-type {
+    overflow: scroll;
+    height: 25px;
+    font-weight: 500;
+    color: white;
+}
+main section article p:last-of-type {
+    height: 20px;
+    color: #d0d0d0;
+}
+
+/*main section:first-of-type article a:hover {*/
+/*    border: 2px solid white;*/
+/*}*/
+main section img {
+    width: 250px;
+    height: 400px;
+    transition: all 0.2s ease-in-out;
+
+}
+section a:hover img {
+    box-shadow: 2px 2px 5px #191818;
+}
+
+
