@@ -15,9 +15,18 @@ document.addEventListener('DOMContentLoaded', function loaded() {
 
                 for (let i = 0; i<items.length; i++) {
 
+                    console.log(items[i].media_type)
                     if (items[i].title != null) {
-                        let a            = document.createElement('a')
-                        a.href           = './view/detail.php?movie='+items[i].id
+
+                        if (items[i].media_type == 'movie') {
+
+                            var a            = document.createElement('a')
+                            a.href           = './view/detail.php?movie='+items[i].id
+
+                        } else if (items[i].media_type == 'tv') {
+                            var a            = document.createElement('a')
+                            a.href           = './view/detail.php?tv='+items[i].id
+                        }
                         let img          = document.createElement('img')
                         img.src          = 'https://image.tmdb.org/t/p/w500/'+items[i].poster_path
                         img.alt          = items[i].title
@@ -32,8 +41,18 @@ document.addEventListener('DOMContentLoaded', function loaded() {
                         a.appendChild(pNote)
 
                     } else {
-                        let a            = document.createElement('a')
-                        a.href           = './view/detail.php?movie='+items[i].id
+
+                        if (items[i].media_type == 'movie') {
+
+                            var a            = document.createElement('a')
+                            a.href           = './view/detail.php?movie='+items[i].id
+
+                        } else if (items[i].media_type == 'tv') {
+                            var a            = document.createElement('a')
+                            a.href           = './view/detail.php?tv='+items[i].id
+                        }
+
+
                         let img          = document.createElement('img')
                         img.src          = 'https://image.tmdb.org/t/p/w500/'+items[i].poster_path
                         img.alt          = items[i].title
@@ -62,7 +81,7 @@ document.addEventListener('DOMContentLoaded', function loaded() {
 
                 for (let i = 0; i<item.length; i++) {
                     let a            = document.createElement('a')
-                    a.href           = './view/detail.php?movie='+item[i].id
+                    a.href           = './view/detail.php?tv='+item[i].id
                     let img          = document.createElement('img')
                     img.src          = 'https://image.tmdb.org/t/p/w500/'+item[i].poster_path
                     img.alt          = item[i].name
