@@ -8,6 +8,7 @@ html, body {
     background: -webkit-linear-gradient(90deg, rgba(56,25,69,1) 0%, rgba(57,49,108,1) 51%, rgba(33,35,96,1) 100%);
     background: linear-gradient(90deg, rgba(56,25,69,1) 0%, rgba(57,49,108,1) 51%, rgba(33,35,96,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#381945",endColorstr="#212360",GradientType=1);
+    scroll-behavior: smooth;
 }
 main {
     display: flex;
@@ -23,6 +24,18 @@ h1 {
     font-size: 5em;
     max-width: 50%;
     text-shadow: 1px 1px 5px black;
+    margin-bottom: 0;
+}
+h2 {
+    margin-top: -10px;
+    font-style: italic;
+    color: white;
+    text-shadow: 1px 1px 5px black;
+    margin-bottom: 50px;
+}
+h3 {
+    color: white;
+    font-size: 2em;
 }
 section:first-of-type {
     margin-top: 600px;
@@ -32,4 +45,35 @@ section:first-of-type p:first-of-type {
     color: white;
     font-size: 1.1em;
     text-shadow: 1px 1px 5px black;
+}
+section:first-of-type div:first-of-type>img {
+    width: 100px;
+}
+section:first-of-type p {
+    color: white;
+    font-size: 1.1em;
+    text-shadow: 1px 1px 5px black;
+    max-width: 45%;
+}
+
+section:nth-of-type(2) {
+    width: 98%;
+    height: auto;
+}
+section:nth-of-type(2) article {
+    display: flex;
+    justify-content: space-between;
+    overflow: scroll;
+    scroll-behavior: smooth;
+}
+section:nth-of-type(2) article a {
+    margin-right: 10px;
+}
+section:nth-of-type(2) article img {
+    width: 250px;
+    height: 400px;
+    transition: all .2s ease-in-out;
+}
+section:nth-of-type(2) article img:hover {
+    box-shadow: 2px 2px 5px #191818;
 }

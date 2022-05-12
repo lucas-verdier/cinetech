@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', function loaded() {
     function similar(id) {
         var article = document.querySelector('main section:nth-of-type(3) article')
 
-        fetch(' https://api.themoviedb.org/3/movie/'+id+'/similar?api_key='+api_key+'&language=fr-FR')
+        fetch('https://api.themoviedb.org/3/movie/'+id+'/similar?api_key='+api_key+'&language=fr-FR')
             .then(response => response.json())
             .then(data => {
                 var item = data.results
