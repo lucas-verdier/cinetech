@@ -1,5 +1,6 @@
+<?php require_once('../controller/register.php') ?>
 <!doctype html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -9,22 +10,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="../js/movie.js"></script>
+    <script src="../js/register.js"></script>
     <link rel="stylesheet" href="../style/header.css">
-    <link rel="stylesheet" href="../style/movie.css">
-    <title>Cinetech - Films</title>
+    <link rel="stylesheet" href="../style/register.css">
+    <title>Cinetech - Inscription</title>
 </head>
-    <body>
-    <?php include_once('./header.php') ?>
-        <main>
-            <h1>Films</h1>
-            <section>
-                <h2>Catégories</h2>
-                <article></article>
-            </section>
-            <section>
-                <article></article>
-            </section>
-        </main>
-    </body>
+<body>
+<?php include_once('./header.php') ?>
+    <main>
+        <form method="POST">
+
+        </form>
+    </main>
+</body>
 </html>
