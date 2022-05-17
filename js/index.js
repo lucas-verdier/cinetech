@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', function loaded() {
             .then(data => {
 
                 var items = data.results
+                console.log(items)
 
                 for (let i = 0; i<items.length; i++) {
 

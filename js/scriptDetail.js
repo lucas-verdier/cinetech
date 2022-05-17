@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function loaded() {
     const api_key     = 'ae72c71ddb7cb4d98464e3d2b33c101b'
     var firstSection  = document.querySelector('main section:first-of-type')
     var secondSection = document.querySelector('main section:nth-of-type(2)')
-    var secondArticle       = document.querySelector('main section:nth-of-type(2)>article')
+    var secondArticle = document.querySelector('main section:nth-of-type(2)>article')
     var main          = document.querySelector('main')
 
     function $_GET(param) {
@@ -84,7 +84,6 @@ document.addEventListener('DOMContentLoaded', function loaded() {
             .then(response => response.json())
             .then(data => {
                 var item = data.results
-                console.log(item)
 
                 for (let i = 0; i<item.length; i++) {
                     let a            = document.createElement('a')
@@ -160,7 +159,7 @@ document.addEventListener('DOMContentLoaded', function loaded() {
 
                 for (let i = 0; i<item.length; i++) {
                     let a            = document.createElement('a')
-                    a.href           = 'detail.php?movie='+item[i].id
+                    a.href           = 'detail.php?tv='+item[i].id
                     let img          = document.createElement('img')
                     img.src          = 'https://image.tmdb.org/t/p/w500/'+item[i].poster_path
                     img.alt          = item[i].title

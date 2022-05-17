@@ -19,7 +19,7 @@ main {
     background-repeat: no-repeat;
 }
 
-h1 {
+main h1 {
     color: white;
     font-size: 5em;
     max-width: 50%;

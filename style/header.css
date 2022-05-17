@@ -2,12 +2,18 @@ header {
     margin: 0;
     position: sticky;
     top: 0;
-    background-color: rgba(255, 255, 255, 0.47);
+    background-color: rgb(255, 255, 255);
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-shadow: 2px 2px 5px #201f1f;
 }
+
+header img {
+    margin-left: 20px;
+}
+
 nav {
     width: 35%;
 }
@@ -43,16 +49,29 @@ form {
     height: 35px;
 }
 form input {
+    border: 2px solid rgba(57,49,108,1);
     width: 90%;
     height: 100%;
     border-radius: 20px;
-    border-style: none;
+    padding-left: 10px;
+    font-size: 1em;
+    color: rgba(33,35,96,1);
+    /*border-style: none;*/
 }
+
 form button {
-    font-size: 1.3em;
+    font-size: 1.4em;
+    color: rgba(57,49,108,1);
     background: none;
     border-style: none;
     margin-right: 50px;
     margin-left: 10px;
+    transition: all .2s ease-in-out;
 }
+form button:hover {
+    /*font-size: 1.5em;*/
+    transform: scale(1.1);
+    color: rgba(252,176,69,1);
+}
+
 
