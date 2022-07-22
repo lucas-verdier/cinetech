@@ -2,14 +2,16 @@
 
 namespace App\Models;
 
+use Exception;
+
 class User extends DB
 {
-    protected PDO $db;
-    protected string $table;
+    protected $db;
 
     public function __construct()
     {
         $this->table = 'users';
+        $this->db = DB::instance();
     }
 
     public function newUser($firstname, $name, $email, $password)
@@ -37,6 +39,18 @@ class User extends DB
         } else {
             return false;
         }
+    }
+
+    public function findOneUserBy($email) {
+        $field = 'email';
+        $hiddenArg = ':email';
+        $arg = array(
+            ':email' => $email
+        );
+
+        $req = $this->db = DB::findOneBy($this->table, $field, $hiddenArg, $arg);
+
+        return $req;
     }
 }
 

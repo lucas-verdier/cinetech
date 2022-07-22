@@ -14,16 +14,16 @@ header img {
     margin-left: 20px;
 }
 
-nav {
+header nav {
     width: 35%;
 }
-nav ul {
+header nav ul {
     display: flex;
     justify-content: space-around;
     align-items: center;
     list-style: none;
 }
-ul a {
+header ul a {
     font-weight: 500;
     text-decoration: none;
     font-size: 1.1em;
@@ -33,22 +33,22 @@ ul a {
     -webkit-text-fill-color: transparent;
     transition: all 0.2s ease-in-out;
 }
-ul a:hover {
+header ul a:hover {
     background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
     background-clip: border-box;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-ul li:last-of-type a {
+header ul li:last-of-type a {
     font-size: 1.7em;
 }
-form {
+header form {
     display: flex;
     align-items: center;
     width: 20%;
     height: 35px;
 }
-form input {
+header form input {
     border: 2px solid rgba(57,49,108,1);
     width: 90%;
     height: 100%;
@@ -59,7 +59,7 @@ form input {
     /*border-style: none;*/
 }
 
-form button {
+header form button {
     font-size: 1.4em;
     color: rgba(57,49,108,1);
     background: none;
@@ -68,7 +68,7 @@ form button {
     margin-left: 10px;
     transition: all .2s ease-in-out;
 }
-form button:hover {
+header form button:hover {
     /*font-size: 1.5em;*/
     transform: scale(1.1);
     color: rgba(252,176,69,1);

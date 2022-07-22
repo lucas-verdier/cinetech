@@ -10,4 +10,6 @@ return array(
     'Symfony\\Polyfill\\Mbstring\\' => array($vendorDir . '/symfony/polyfill-mbstring'),
     'Symfony\\Component\\VarDumper\\' => array($vendorDir . '/symfony/var-dumper'),
     'Psr\\Log\\' => array($vendorDir . '/psr/log/src'),
+    'App\\Models\\' => array($baseDir . '/App/Models'),
+    'App\\Controllers\\' => array($baseDir . '/App/Controllers'),
 );

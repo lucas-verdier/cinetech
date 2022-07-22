@@ -64,6 +64,16 @@ class DB
             $req->execute($values);
         }
     }
+
+    // FIND AN ITEM BY CHECKING IF A VALUE EXIST
+    public function findOneBy($table, $field, $hiddenArg, $arg)
+    {
+        $sql = "SELECT * FROM $table WHERE $field = $hiddenArg";
+        $req = $this->db->run($sql, $arg);
+        $res = $req->fetch();
+
+        return $res;
+    }
 }
 
 //?>

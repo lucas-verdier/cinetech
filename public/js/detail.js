@@ -8,26 +8,13 @@ document.addEventListener('DOMContentLoaded', function loaded() {
     var secondArticle = document.querySelector('main section:nth-of-type(2)>article')
     var main          = document.querySelector('main')
 
-    function $_GET(param) {
-        var getValue = {}
-        window.location.href.replace(location.hash, '').replace(
-            /[?&]+([^=&]+)=?([^&]*)?/gi,
-            function( m, key, value ) {
-                getValue[key] = value !== undefined ? value : ''
-            }
-        )
-        if(param) {
-            return getValue[param] ? getValue[param] : null
-        }
-        return getValue
-    }
+    var url = window.location.href
+    var n = url.lastIndexOf('=')
+    var idOfContent = url.substring(n+1)
+    console.log(idOfContent)
 
-    var $_GET = $_GET(),
-        movie = $_GET['movie'],
-        tv    = $_GET['tv']
-
-    if (movie) {
-        fetch('https://api.themoviedb.org/3/movie/'+movie+'?api_key='+api_key+'&language=fr-FR')
+    if (url.includes('movie')) {
+        fetch('https://api.themoviedb.org/3/movie/'+idOfContent+'?api_key='+api_key+'&language=fr-FR')
             .then(response => response.json())
             .then(data => {
                 console.log(data)
@@ -80,14 +67,14 @@ document.addEventListener('DOMContentLoaded', function loaded() {
                 firstSection.appendChild(pDescription)
             })
 
-        fetch('https://api.themoviedb.org/3/movie/'+movie+'/similar?api_key='+api_key+'&language=fr-FR')
+        fetch('https://api.themoviedb.org/3/movie/'+idOfContent+'/similar?api_key='+api_key+'&language=fr-FR')
             .then(response => response.json())
             .then(data => {
                 var item = data.results
 
                 for (let i = 0; i<item.length; i++) {
                     let a            = document.createElement('a')
-                    a.href           = 'detail.php?movie='+item[i].id
+                    a.href           = 'detailView.php?movie='+item[i].id
                     let img          = document.createElement('img')
                     img.src          = 'https://image.tmdb.org/t/p/w500/'+item[i].poster_path
                     img.alt          = item[i].title
@@ -98,8 +85,8 @@ document.addEventListener('DOMContentLoaded', function loaded() {
 
             })
     }
-    if (tv) {
-        fetch('https://api.themoviedb.org/3/tv/'+tv+'?api_key='+api_key+'&language=fr-FR')
+    if (url.includes('tv')) {
+        fetch('https://api.themoviedb.org/3/tv/'+idOfContent+'?api_key='+api_key+'&language=fr-FR')
             .then(response => response.json())
             .then(data => {
                 console.log(data)
@@ -151,7 +138,7 @@ document.addEventListener('DOMContentLoaded', function loaded() {
                 pDescription.innerHTML = 'Description : ' + data.overview
                 firstSection.appendChild(pDescription)
             })
-        fetch('https://api.themoviedb.org/3/tv/'+tv+'/similar?api_key='+api_key+'&language=fr-FR')
+        fetch('https://api.themoviedb.org/3/tv/'+idOfContent+'/similar?api_key='+api_key+'&language=fr-FR')
             .then(response => response.json())
             .then(data => {
                 var item = data.results
@@ -159,7 +146,7 @@ document.addEventListener('DOMContentLoaded', function loaded() {
 
                 for (let i = 0; i<item.length; i++) {
                     let a            = document.createElement('a')
-                    a.href           = 'detail.php?tv='+item[i].id
+                    a.href           = 'detailView.php?tv='+item[i].id
                     let img          = document.createElement('img')
                     img.src          = 'https://image.tmdb.org/t/p/w500/'+item[i].poster_path
                     img.alt          = item[i].title

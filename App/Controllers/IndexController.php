@@ -22,5 +22,20 @@ class IndexController {
         return Render::render($name, $params);
     }
 
+    static function detail($type, $id) {
+        $pageTitle = 'Détail';
+        $name      = 'detail';
+        $css       = 'detail';
+        $js        = 'detail';
+
+        $params = array(
+            'name' => $pageTitle,
+            'css'  => $css,
+            'js'   => $js
+        );
+
+        return Render::render($name, $params);
+    }
+
 }
 
